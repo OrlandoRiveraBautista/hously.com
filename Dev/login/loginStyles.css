@@ -1,0 +1,212 @@
+/* variable colors */
+:root {
+  --main-nav-color: #4444FF;
+  --second-theme-color: #6969FF;
+  --main-logo-color: white;
+  --option-active: #303a43;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Navigation bar */
+
+.navbar {
+  opacity: 95% !important;
+  padding .8rem;
+  transition: .1s ease-in-out;
+  background-color: var(--main-nav-color) !important;
+}
+.navbar.scroll{
+  -webkit-box-shadow: 0px 6px 8px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 8px -5px rgba(0,0,0,0.75);
+box-shadow: 0px 6px 8px -5px rgba(0,0,0,0.75);
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+.navbarPreview {
+  height: 50px;
+  position: absolute;
+}
+
+/* company logo */
+#companyName{
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  font-size: 33px;
+  color: var(--main-logo-color);
+}
+
+  /* collapse nav */
+  /* collapse button */
+  .navbar-toggler{
+    border: none;
+    outline: none;
+  }
+  .navbar-toggler:focus{
+    outline: none;
+  }
+  .navigationColapseIcon{
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+  }
+.navigationColapseIcon span{
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  outline: none;
+  }
+
+  .navigationColapseIcon span {
+  background: var(--main-logo-color);
+  }
+
+  .navigationColapseIcon span:nth-child(1) {
+  top: 0px;
+  }
+
+  .navigationColapseIcon span:nth-child(2) {
+  top: 10px;
+  }
+
+  .navigationColapseIcon span:nth-child(3) {
+  top: 20px;
+  }
+
+  .navigationColapseIcon.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  }
+
+  .navigationColapseIcon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+  }
+
+  .navigationColapseIcon.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  }
+
+  .collapse{
+    height: 80%;
+  }
+
+
+  /* Page content */
+
+#pg-content{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-logo-color);
+  padding-top: 100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* login option */
+#pg-content h1 {
+  font-size: 30px;
+  outline: none;
+  color: var(--option-active);
+  display: inline-block;
+  position: relative;
+}
+.login-tittle::after{
+  border-bottom: 4px solid var(--option-active);
+  bottom: -12px;
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 49px;
+}
+
+/* form container */
+#form-container{
+  background: #fff;
+  color: #525f7f;
+  margin-top: 25px;
+  padding: 30px 30px 20px;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+}
+
+/* login form */
+.form-group {
+  clear: both;
+  float: left;
+  margin: 0 0 30px;
+  width: 100%;
+  position: relative;
+}
+/* login button */
+.submitbtn {
+  margin-top: 15px;
+}
+.submitbtn button {
+  width: 100%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--main-logo-color);
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--second-theme-color);
+  box-shadow: 0 15px 30px 0 rgba(105,105,255,.13), 0 5px 15px 0 rgba(105,105,255,.10);
+}
+/* controling the from elements */
+.form-control {
+  padding: 0 0 0 10px;
+  border: medium none;
+  border-radius: 0;
+  box-shadow: none !important;
+  border-bottom: 2px solid #dae1e7;
+  font-size: 16px;
+}
+
+
+/* Different Sizes */
+@media (min-width: 768px) {
+  .col-lg-6{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+}
